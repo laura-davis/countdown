@@ -11,9 +11,12 @@
     "expo": "~37.0.3",
     "expo-splash-screen": "^0.2.3",
     "expo-updates": "~0.2.0",
+    "moment": "^2.25.3",
+    "prop-types": "latest",
     "react": "~16.9.0",
     "react-dom": "~16.9.0",
     "react-native": "~0.61.5",
+    "react-native-action-button": "^2.8.5",
     "react-native-gesture-handler": "~1.6.0",
     "react-native-reanimated": "~1.7.0",
     "react-native-screens": "~2.2.0",
@@ -24,6 +27,9 @@
     "@babel/core": "~7.9.0",
     "babel-jest": "~25.2.6",
     "jest": "~25.2.6",
+    "react-native-modal-datetime-picker": "^8.6.0",
+    "react-navigation": "^4.3.9",
+    "react-navigation-tabs": "^2.8.13",
     "react-test-renderer": "~16.9.0"
   },
   "jest": {
