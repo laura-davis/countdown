@@ -2,6 +2,7 @@ import React, {Component} from 'react';
 import {FlatList, Text, StyleSheet} from 'react-native';
 import EventCard from "./EventCard";
 import ActionButton from 'react-native-action-button';
+import {getEvents, saveEvent} from "./api";
 
 export default class EventList extends Component {
 
@@ -19,14 +20,14 @@ export default class EventList extends Component {
             })
         }, 1000);
 
-        const events = require('./db').events.map(e => ({
-            ...e, date: new Date(e.date)
-        }));
-        this.setState({events})
+        this.props.navigation.addListener('didFocus', () => {
+            getEvents().then(events => this.setState({events}))
+        })
     }
 
     handleAddEvent = () => {
-        this.props.navigation.navigate('form');
+        saveEvent(this.state)
+            .then(() => this.props.navigation.goBack());
     };
 
 
